@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive City Info</title>
+  <style>
+    /* Reset & Body */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      background: url('https://source.unsplash.com/1600x900/?world') no-repeat center center/cover;
+      transition: background-image 0.5s ease-in-out;
+    }
+
+    /* Main Container */
+    .container {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+    }
+
+    /* Title */
+    h1 {
+      margin-bottom: 40px;
+      font-size: 45px;
+    }
+
+    /* Country Buttons */
+    .countries button {
+      padding: 15px 30px;
+      margin: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #ff9800;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .countries button:hover {
+      background: #e67e22;
+    }
+
+    /* Details Box */
+    .details {
+      margin-top: 50px;
+      padding: 25px;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .details h2, .details p {
+      margin: 15px 0;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: -30px;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .countries button {
+        width: 80%;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Select a City</h1>
+    <div class="countries">
+      <button onclick="showDetails('London')">London</button>
+      <button onclick="showDetails('Paris')">Paris</button>
+      <button onclick="showDetails('New York')">New York</button>
+      <button onclick="showDetails('Tokyo')">Tokyo</button>
+      <button onclick="showDetails('Sydney')">Sydney</button>
+    </div>
+
+    <div id="details" class="details">
+      <h2>Click a city to view details</h2>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Dynamic Web Demo. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showDetails(city) {
+      const detailsDiv = document.getElementById('details');
+      let content = '';
+
+      if (city === 'London') {
+        document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?london')";
+        content = `
+          <h2>London</h2>
+          <p>Capital of England. Famous for Big Ben, Buckingham Palace, and the London Eye.</p>
+        `;
+      }
+      else if (city === 'Paris') {
+        document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?paris')";
+        content = `
+          <h2>Paris</h2>
+          <p>Capital of France. Known for the Eiffel Tower, Louvre Museum, and rich cuisine.</p>
+        `;
+      }
+      else if (city === 'New York') {
+        document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?newyork')";
+        content = `
+          <h2>New York</h2>
+          <p>Iconic US city known for Times Square, Central Park, and the Statue of Liberty.</p>
+        `;
+      }
+      else if (city === 'Tokyo') {
+        document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?tokyo')";
+        content = `
+          <h2>Tokyo</h2>
+          <p>Capital of Japan. Known for Tokyo Tower, technology, anime culture, and cuisine.</p>
+        `;
+      }
+      else if (city === 'Sydney') {
+        document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?sydney')";
+        content = `
+          <h2>Sydney</h2>
+          <p>Major Australian city. Famous for the Sydney Opera House and Bondi Beach.</p>
+        `;
+      }
+
+      detailsDiv.innerHTML = content;
+    }
+  </script>
+</body>
+</html>

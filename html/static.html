@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Static Webpage</title>
+
+    <!-- Internal CSS styling -->
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: darkblue;
+            text-align: center;
+            border: 3px solid black;
+            padding: 10px;
+            background-color: lightyellow;
+        }
+
+        p {
+            color: #333;
+            font-size: 18px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 2px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        td {
+            background-color: #e7f3fe;
+        }
+
+        .my-image {
+            display: block;
+            margin: 0 auto;
+            border: 5px groove #555;
+            width: 300px;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        form {
+            background-color: #ddd;
+            padding: 20px;
+            width: 50%;
+            margin: 20px auto;
+            border: 2px solid #444;
+            border-radius: 8px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to My Static Webpage</h1>
+
+    <p>This is a simple static website created using HTML and CSS, covering major topics like tables, borders, images, forms, lists, and links.</p>
+
+    <h2>My Favorite Subjects</h2>
+    <ul>
+        <li>Web Development</li>
+        <li>Python Programming</li>
+        <li>Cloud Computing</li>
+        <li>Artificial Intelligent</li>
+    </ul>
+
+    <h2>Steps to Create a Webpage</h2>
+    <ol>
+        <li>Learn HTML</li>
+        <li>Learn CSS</li>
+        <li>Create a Webpage</li>
+        <li>Host it Online</li>
+    </ol>
+
+    <h2>Student Details Table</h2>
+    <table>
+        <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Course</th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>Pallavi</td>
+            <td>B.Tech</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Ananya</td>
+            <td>MCA</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>Raj</td>
+            <td>B.Sc</td>
+        </tr>
+    </table>
+
+    <h2>My Picture</h2>
+    <img src="https://via.placeholder.com/300" alt="Sample Image" class="my-image">
+
+    <h2>Contact Me</h2>
+    <form>
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label>Message:</label>
+        <textarea rows="5" placeholder="Write your message here..."></textarea>
+
+        <label>Choose Course:</label>
+        <select>
+            <option>Web Development</option>
+            <option>Python</option>
+            <option>Cloud</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Useful Links</h2>
+    <p>Visit <a href="https://www.w3schools.com" target="_blank">W3Schools</a> for tutorials.</p>
+
+</body>
+</html>
